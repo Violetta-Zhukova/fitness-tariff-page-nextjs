@@ -3,7 +3,9 @@
 Страница фитнес-приложения с тарифами с таймером акции и интерактивным выбором плана подписки.
 
 <div style="display: flex; gap: 10px; align-items: center;">
-<img height="300" alt="image" src="./public/img/1920.png"><img height="300" alt="image" src="./public/img/375.png"><img height="300" alt="image" src="./public/img/320.png">
+<img height="300" alt="image" src="./public/img/1920.png"> 
+<img height="300" alt="image" src="./public/img/375.png"> 
+<img height="300" alt="image" src="./public/img/320.png"> 
 </div>
 
 ## Стек
