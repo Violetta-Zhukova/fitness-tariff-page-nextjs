@@ -1,36 +1,35 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Страница тарифов для фитнеса (Next.js)
 
-## Getting Started
+Страница фитнес-приложения с тарифами с таймером акции и интерактивным выбором плана подписки.
 
-First, run the development server:
+<img height="300" alt="image" src="./public/img/1920.png"> 
+<img height="300" alt="image" src="./public/img/375.png"> 
+<img height="300" alt="image" src="./public/img/320.png">
 
-```bash
+## Стек
+
+<img src='https://img.shields.io/badge/next%20js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white'/> <img src='https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB'/> <img src='https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white'/> <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white" />
+
+## Реализованный функционал
+
+- Адаптивная верстка трех экранов по макету Figma (320, 375, 1920)
+- Таймер обратного отсчета (2 минуты) в закрепленном хедере, красная подсветка и мигание при остатке <30 секунд
+- Управление скидками: автоматическое скрытие скидок при окончании таймера, плавная анимация исчезновения скидочных цен
+- Выбор тарифов: визуальное выделение выбранного тарифа, hover-эффекты на карточках
+- Валидация страницы: красная подсветка чекбокса при попытке покупки без согласия
+
+## Установка и запуск
+
+Для установки и запуска проекта необходимо выполнить команды
+
+```
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+или
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+```
+yarn
+yarn dev
+```
