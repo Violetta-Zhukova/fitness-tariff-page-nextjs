@@ -140,7 +140,7 @@ export const TariffPageClient: FC<TTariffPageClientProps> = ({ tariffs }) => {
               disabled={!currentTariff}
               onClick={handlePurchase}
               type="button"
-              className="bg-[#FDB056] text-lg font-bold text-[#191E1F] rounded-[20px] py-3.5 xs:py-4.5 px-27.25 w-full max-w-88 mt-2.5 xs:mt-3 3xl:mt-1.5 cursor-pointer hover:animate-pulse disabled:opacity-50"
+              className="bg-[#FDB056] text-lg font-bold text-[#191E1F] rounded-[20px] py-3.5 xs:py-4.5 px-27.25 w-full max-w-88 mt-2.5 xs:mt-3 3xl:mt-1.5 cursor-pointer animate-pulse disabled:opacity-50"
             >
               Купить
             </button>

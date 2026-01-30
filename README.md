@@ -2,6 +2,8 @@
 
 Страница фитнес-приложения с тарифами с таймером акции и интерактивным выбором плана подписки.
 
+[Перейти на сайт](https://fitness-tariff-page-nextjs.vercel.app/)
+
 <div style="display: flex; gap: 10px; align-items: center;">
 <img height="300" alt="image" src="./public/img/1920.png"> 
 <img height="300" alt="image" src="./public/img/375.png"> 
