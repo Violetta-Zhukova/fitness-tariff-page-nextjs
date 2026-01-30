@@ -48,20 +48,20 @@ export const TariffPageClient: FC<TTariffPageClientProps> = ({ tariffs }) => {
     <>
       <Header onTimerEnd={handleTimerEnd} />
       <main className="flex flex-col justify-center gap-5 3xl:gap-16.5 items-start px-4 py-5 xs:pb-7.5 3xl:px-88 3xl:pt-12.5 3xl:pb-37.5">
-        <p className="font-bold text-[22px] leading-6 xs:text-2xl 3xl:text-[40px] 3xl:leading-11">
-          Выбери подходящий для себя{" "}
+        <p className="font-bold text-[22px] leading-6 xs:text-2xl xs:leading-6.5 3xl:text-[40px] 3xl:leading-11">
+          Выбери подходящий для&nbsp;себя{" "}
           <span className="text-[#FDB056]">тариф</span>
         </p>
-        <div className="flex flex-col 3xl:flex-row 3xl:gap-21.75 items-center justify-center ">
+        <div className="flex flex-col 3xl:flex-row 3xl:gap-21.75 3xl:mt-11 items-center justify-center ">
           <Image
-            className="w-[99.28px] h-50 xs:w-31 xs:h-62.5 3xl:w-95.25 3xl:h-191.75 md:shrink-0"
+            className="block w-[99.28px] h-50 mt-1 xs:mt-0 xs:w-31 xs:h-62.5 3xl:w-95.25 3xl:h-191.75 md:shrink-0"
             width={381}
             height={767}
             src="/man-image.png"
             alt={"Фото спортсмена"}
           />
 
-          <div className="flex flex-col gap-1.5 xs:gap-2 3xl:gap-3.5 justify-center items-start 3xl:w-187">
+          <div className="grid grid-cols-1 gap-1.5 xs:gap-2 3xl:gap-3.5 justify-center items-start 3xl:max-w-187">
             {bestTariff && (
               <BestTariff
                 bestTariff={bestTariff}
@@ -78,7 +78,7 @@ export const TariffPageClient: FC<TTariffPageClientProps> = ({ tariffs }) => {
               selectedTariffId={currentTariff}
             />
 
-            <div className="mt-1 3xl:mt-1.5 flex flex-row gap-1.5 3xl:gap-2 3xl:max-w-124.75 font-medium rounded-2xl  xs:rounded-[20px] bg-[#2D3233] ps-3 pe-14 py-3.5 3xl:px-5 3xl:py-4.5">
+            <div className="mt-1 3xl:mt-3 flex flex-row gap-1.5 3xl:gap-2 max-w-124.75 font-medium rounded-2xl  xs:rounded-[20px] bg-[#2D3233] ps-3 pe-7 py-3.5 3xl:px-5 3xl:py-4.5">
               <svg
                 className="h-6.5 w-6 shrink-0"
                 viewBox="0 0 24 26"
@@ -100,7 +100,7 @@ export const TariffPageClient: FC<TTariffPageClientProps> = ({ tariffs }) => {
               </p>
             </div>
 
-            <form className="mt-2.5 xs:mt-4 max-w-162.25 w-fit flex flex-row gap-2.5 justify-start items-start ">
+            <form className="mt-2.5 xs:mt-4 3xl:mt-5 max-w-162.25 w-fit flex flex-row gap-2.5 justify-start items-start ">
               <div>
                 <input
                   type="checkbox"
@@ -123,14 +123,14 @@ export const TariffPageClient: FC<TTariffPageClientProps> = ({ tariffs }) => {
 
               <label
                 htmlFor="oferta"
-                className="text-[#CDCDCD] text-xs font-normal 3xl:text-base"
+                className="text-[#CDCDCD] text-xs leading-3.5 font-normal 3xl:text-base"
               >
                 Я согласен с{" "}
-                <Link href="/oferta" className="underline underline-offset-3">
+                <Link href="/oferta" className="underline underline-offset-2">
                   офертой рекуррентных платежей
                 </Link>{" "}
                 и{" "}
-                <Link href="/policy" className="underline underline-offset-3">
+                <Link href="/policy" className="underline underline-offset-2">
                   Политикой конфиденциальности
                 </Link>
               </label>
@@ -140,7 +140,7 @@ export const TariffPageClient: FC<TTariffPageClientProps> = ({ tariffs }) => {
               disabled={!currentTariff}
               onClick={handlePurchase}
               type="button"
-              className="bg-[#FDB056] text-lg font-bold text-[#191E1F] rounded-[20px] py-4 px-27.25 w-full max-w-88 mt-2.5 xs:mt-3 3xl:mt-0.5 cursor-pointer hover:animate-pulse disabled:opacity-50"
+              className="bg-[#FDB056] text-lg font-bold text-[#191E1F] rounded-[20px] py-3.5 xs:py-4.5 px-27.25 w-full max-w-88 mt-2.5 xs:mt-3 3xl:mt-1.5 cursor-pointer hover:animate-pulse disabled:opacity-50"
             >
               Купить
             </button>
@@ -157,10 +157,10 @@ export const TariffPageClient: FC<TTariffPageClientProps> = ({ tariffs }) => {
         </div>
 
         <div className="flex flex-col items-start justify-center gap-2.5 3xl:gap-7.5 p-3 3xl:p-5 border rounded-[20px] 3xl:rounded-[30px] border-[#484D4E] border-solid w-full max-w-304">
-          <p className="text-[#81FE95] font-medium text-base xs:text-lg 3xl:text-[28px] 3xl:leading-8 border rounded-[30px] border-[#81FE95] border-solid bg-[#2D3233] pt-2.5 pb-3 px-4.5 3xl:px-7.5 3xl:pt-4 3xl:pb-4.5">
+          <p className="text-[#81FE95] font-medium text-base xs:text-lg 3xl:text-[28px] 3xl:leading-8 border rounded-3xl border-[#81FE95] border-solid bg-[#2D3233] pt-2 pb-2 px-4 3xl:px-7.5 3xl:pt-4 3xl:pb-4.5">
             гарантия возврата 30 дней
           </p>
-          <p className="text-[#DCDCDC] font-normal text-[13px] xs:text-sm 3xl:text-2xl">
+          <p className="text-[#DCDCDC] font-normal leading-4.25 text-[13px] xs:text-sm xs:leading-4.5 3xl:text-2xl 3xl:leading-8">
             Мы уверены, что наш план сработает для тебя и ты увидишь видимые
             результаты уже через 4 недели! Мы даже готовы полностью вернуть твои
             деньги в течение 30 дней с момента покупки, если ты не получишь

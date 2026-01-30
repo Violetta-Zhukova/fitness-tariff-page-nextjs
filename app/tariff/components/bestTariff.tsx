@@ -32,18 +32,19 @@ export const BestTariff: FC<TBestTariffProps> = ({
         onClick={() => {
           onClick(bestTariff.id);
         }}
-        className={`flex flex-row justify-center items-center gap-7.5 xs:gap-12.5 3xl:gap-10   rounded-[20px] 3xl:rounded-[34px] p-5 xs:py-5 xs:px-7.5 3xl:pb-7.5 3xl:pt-8.5 3xl:ps-30.5 3xl:pe-20 relative after:absolute after:content-['хит!'] after:text-[#FDB056] after:font-medium after:text-[13px] after:leading-4 after:xs:text-base after:3xl:text-[22px] after:3xl:leading-7 after:tracking-wide after:top-1.5 after:3xl:top-2.5 after:3xl:right-5 after:right-3.5 cursor-pointer hover:border-[#81FE95] transition-all duration-300 ease-in-out ${isSelected ? "bg-[#81FE95]/15 border-2 border-[#81FE95] scale-102 shadow-lg shadow-[#81FE95]/20" : "border-2 border-[#FDB056] bg-[#313637]"}`}
+        className={`grid grid-cols-2 3xl:grid-cols-[auto_auto] justify-center items-center  xs:gap-12.5 3xl:gap-10 rounded-[20px] 3xl:rounded-[34px] p-4.75 xs:py-5 xs:pe-5.5 xs:ps-7 3xl:pb-7.5 3xl:pt-7 3xl:ps-30.5 3xl:pe-20 relative after:absolute after:content-['хит!'] after:text-[#FDB056] after:font-medium after:text-[13px] after:leading-4 after:xs:text-base after:3xl:text-[22px] after:3xl:leading-7 after:tracking-wide after:top-1.5 after:3xl:top-2.5 after:3xl:right-5 after:right-3.5 cursor-pointer hover:border-[#81FE95] transition-all duration-300 ease-in-out ${isSelected ? "bg-[#81FE95]/15 border-2 border-[#81FE95] scale-102 shadow-lg shadow-[#81FE95]/20" : "border-2 border-[#FDB056] bg-[#313637]"}
+        ${isDiscount ? "gap-7" : "gap-4.5"}`}
       >
-        <div className="flex flex-col items-start 3xl:items-center gap-3 xs:gap-4">
+        <div className="flex flex-col items-start 3xl:items-center gap-3 xs:gap-4 3xl:gap-4">
           <h3 className="font-medium xs:text-lg 3xl:text-[26px]">
             {bestTariff.period}
           </h3>
           <div className="flex flex-col items-end">
-            <p className="font-semibold text-[#FDB056] text-3xl xs:text-[34px] 3xl:text-[50px] transition-all duration-500 ease-in-out">
+            <p className="font-semibold text-[#FDB056] text-3xl xs:text-[34px] 3xl:text-[50px] 3xl:leading-none transition-all duration-500 ease-in-out">
               {isDiscount ? bestTariff.price : bestTariff.full_price}&nbsp;₽
             </p>
             <p
-              className={`text-[#919191] font-normal text-sm xs:text-base 3xl:text-2xl line-through transition-all duration-500 ease-in-out ${isDiscount ? "opacity-100 max-h-10" : "opacity-0 max-h-0 overflow-hidden"}`}
+              className={`text-[#919191] font-normal text-sm xs:text-base 3xl:text-2xl 3xl:leading-none line-through transition-all duration-500 ease-in-out ${isDiscount ? "opacity-100" : "opacity-0"}`}
             >
               {bestTariff.full_price}&nbsp;₽
             </p>

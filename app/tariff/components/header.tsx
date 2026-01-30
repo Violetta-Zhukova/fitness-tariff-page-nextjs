@@ -52,11 +52,11 @@ export const Header: FC<THeaderProps> = ({ onTimerEnd }) => {
   const blinkClass = isBlinking ? "opacity-50" : "opacity-100";
 
   return (
-    <header className="bg-[#1d5b43] w-full flex flex-col gap-1 justify-center items-center py-2 px-[29.5px] xs:px-[19.5px] 3xl:rounded-t-2xl ">
-      <h2 className="text-sm xs:text-lg 3xl:text-2xl font-semibold">
+    <header className="bg-[#1d5b43] w-full flex flex-col gap-1.5 xs:gap-2.5 justify-start items-center py-2 px-[29.5px] xs:px-4.75  3xl:rounded-t-4xl ">
+      <h2 className="text-sm xs:text-lg xs:leading-5.5 3xl:text-2xl 3xl:leading-7 font-semibold">
         Успейте открыть пробную неделю
       </h2>
-      <div className="flex justify-center items-center gap-2">
+      <div className="flex justify-center items-center gap-2 ">
         <svg
           className={`h-3.5 w-3.5 shrink-0 ${blinkClass} `}
           viewBox="0 0 12 12"
@@ -70,10 +70,12 @@ export const Header: FC<THeaderProps> = ({ onTimerEnd }) => {
         </svg>
 
         <p
-          className={`font-bold font-raleway tabular-nums text-[28px] leading-8 xs:text-[32px] xs:leading-9 3xl:text-[40px] 3xl:leading-11  ${timerColor} ${blinkClass}`}
+          className={`font-bold font-mono tabular-nums text-[28px] leading-none xs:text-[32px] 3xl:text-[40px] tracking-wider ${timerColor} ${blinkClass}`}
+          style={{ minWidth: "5ch" }}
         >
           {formatTime(timeLeft)}
         </p>
+
         <svg
           className={`h-3.5 w-3.5 shrink-0 ${blinkClass}`}
           viewBox="0 0 12 12"

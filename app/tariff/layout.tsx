@@ -11,7 +11,7 @@ export default function TariffLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <div className="flex flex-col items-center justify-center mx-auto  p-0 box-border bg-[#232829] rounded-[18px]">
+    <div className="flex flex-col items-center justify-center mx-auto  p-0 box-border bg-[#232829] rounded-[18px] 3xl:rounded-4xl">
       {children}
     </div>
   );

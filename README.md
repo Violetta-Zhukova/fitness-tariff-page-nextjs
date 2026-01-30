@@ -35,3 +35,5 @@ npm run dev
 yarn
 yarn dev
 ```
+
+Страница будет доступна по адресу: http://localhost:3000/tariff
