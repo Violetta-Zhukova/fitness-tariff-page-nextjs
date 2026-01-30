@@ -25,3 +25,19 @@ body {
   color: var(--text-color);
   font-family: var(--font-montserrat);
 }
+
+@keyframes button-pulse {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.85;
+    transform: scale(1.02);
+  }
+}
+
+.animate-button-pulse {
+  animation: button-pulse 1.5s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
